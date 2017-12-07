@@ -4,6 +4,7 @@ import os
 import json 
 
 
+
 app = Flask(__name__)
 api = Api(app)
 
@@ -12,13 +13,13 @@ class DiskUsage(Resource):
         df = []
         dfCmd = os.popen("df -h ")
         i = 0
-        while True:
+        while True: 
             line = dfCmd.readline()
             if line != '':
                 i = i + 1
-                if i > 1:
-                    lineDatas = line.split()[0:6]
-                    df.append({
+                if i > 1: #Suppression de la première ligne du df -h
+                    lineDatas = line.split()[0:6] #Pour parser le fichier
+                    df.append({ #Les attributs d'un objet pour le JSON de fin
                         "filesystem" : lineDatas[0],
                         "size" : lineDatas[1],
                         "used" : lineDatas[2],
