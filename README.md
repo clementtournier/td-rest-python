@@ -38,7 +38,10 @@ Now the server is listening on 127.0.0.1:5000
     ...
 ]
 ```
-
+#### SAMPLE CALL
+````
+curl -i -H "Accept: application/json" -H "Content-Type: application/json" -X GET http://localhost:5000/disk_usage
+````
 ### GET /processes
 ```
 [
@@ -79,4 +82,5 @@ Content-Disposition: form-data; name="process"
 
 apache2
 ```
+
 return True is service is stopped or False.
