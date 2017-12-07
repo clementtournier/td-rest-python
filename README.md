@@ -11,8 +11,9 @@
     $ git checkout develop
     $ pip install -r requirements.txt
     $ python server.py
-
-
+    
+Now the server is listening on 127.0.0.1:5000
+    
 ## API endpoints
 
 ### GET /disk_usage
