@@ -1,8 +1,14 @@
 # TD Rest Api Python
 
+## Notes
+Use this python Rest API to get information about your server :
+- List services and stop them
+- View disk usage informations
+
 ## Requirements
     * Python 2.7 (tested on 2.7.13)
     * PIP (tested on 9.0.1)
+    * Developped on DEBIAN 8
 
 ## Installation
     
@@ -83,4 +89,4 @@ Content-Disposition: form-data; name="process"
 apache2
 ```
 
-return True is service is stopped or False.
+..return True if service is stopped or False.
