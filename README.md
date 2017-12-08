@@ -84,6 +84,10 @@ Use this endpoint to list every processes. (eq = "ps -aux")
     ...
 ]
 ```
+#### SAMPLE CALL
+````
+curl -i -H "Accept: application/json" -H "Content-Type: application/json" -X GET http://localhost:5000/processes
+````
 
 ### POST /processes
 Use this endpoint to stop a process. (eq = "systemctl stop service_name")
