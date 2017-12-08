@@ -2,8 +2,16 @@
 
 ## Notes
 Use this python Rest API to get information about your server :
+
 - List services and stop them
 - View disk usage informations
+
+Security options not included :
+
+- JSON Web Tokens
+- OAuth2
+- sudoers
+
 
 ## Requirements
     * Python 2.7 (tested on 2.7.13)
@@ -23,6 +31,7 @@ Now the server is listening on 127.0.0.1:5000
 ## API endpoints
 
 ### GET /disk_usage
+Use this endpoint to get informations about server disk usage.
 ```
 [
     {
@@ -49,6 +58,7 @@ Now the server is listening on 127.0.0.1:5000
 curl -i -H "Accept: application/json" -H "Content-Type: application/json" -X GET http://localhost:5000/disk_usage
 ````
 ### GET /processes
+Use this endpoint to list every processes. (eq = "ps -aux")
 ```
 [
     {
@@ -76,6 +86,7 @@ curl -i -H "Accept: application/json" -H "Content-Type: application/json" -X GET
 ```
 
 ### POST /processes
+Use this endpoint to stop a process. (eq = "systemctl stop service_name")
 ```
 POST /processes HTTP/1.1
 Host: 127.0.0.1:5000
